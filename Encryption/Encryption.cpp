@@ -150,7 +150,6 @@ void encryption(int argc, char ** argv)
 		int const newsize = ToBeEncrypted.size();
 		btea((uint32_t*)&ToBeEncrypted[0], -newsize / 4, keys);	//Decrypt
 		auto padsize = static_cast<int>(ToBeEncrypted[newsize - 1]);
-		if (padsize > 4) padsize = 0; 
 		for (int i = 0; i < newsize - padsize ; i++) 	//Print decrypted 
 			std::cout << i + 1 << ":" << ToBeEncrypted[i] << " ";
 	
