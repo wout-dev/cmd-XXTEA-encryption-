@@ -50,6 +50,7 @@ void encryption(int argc, char ** argv)
 		encrypt,
 		decrypt
 	};
+	/* Debug
 	std::cout << "you have entered" << argc << "arguments: " << "\n";
 	for (int i = 0; i < argc; ++i)
 	{
@@ -57,11 +58,11 @@ void encryption(int argc, char ** argv)
 	}
 	std::cout << std::endl; 
 	std::cout << argv[0] << std::endl; 
+	*/
 	int offset = 1; 
-	
 	auto checkifCMD = argv[0]; 
 	if (checkifCMD[0] == 'C' && checkifCMD[1] == ':')
-	{
+	{ //Supports launching with set arguments via vs or other script
 		std::cout << "is not from cmd" << std::endl; 
 		offset = 0;
 	}
